@@ -110,7 +110,7 @@ void Bank::listCustomers()
 
 void Bank::addCheckingAccount(std::string IBAN, std::string customerID, double balance)
 {
-	if (isIbanExist(IBAN)) 
+	if (IbanExists(IBAN)) 
 	{
 		throw std::invalid_argument("Customer with ID:: " + IBAN + " already exist!");	
 	}
@@ -123,7 +123,7 @@ void Bank::addCheckingAccount(std::string IBAN, std::string customerID, double b
 
 void Bank::addSavingsAccount(std::string IBAN, std::string customerID, double balance, double interestRate)
 {
-	if (isIbanExist(IBAN)) 
+	if (IbanExists(IBAN)) 
 	{
 		throw std::invalid_argument("Customer with ID:: " + IBAN + " already exist!");
 	}
@@ -177,7 +177,7 @@ void Bank::getLoan(std::string customerID, double loanRate, double amount)
 
 void Bank::listCustomerAccount(std::string IBAN)
 {
-	if (isIbanExist(IBAN)) 
+	if (IbanExists(IBAN)) 
 	{
 		accounts[IBAN]->printInformation();
 	}
@@ -190,7 +190,7 @@ void Bank::listCustomerAccount(std::string IBAN)
 
 void Bank::transfer(std::string fromIBAN, std::string toIBAN, double amount)
 {
-	if (isIbanExist(fromIBAN) && isIbanExist(toIBAN))
+	if (IbanExists(fromIBAN) && IbanExists(toIBAN))
 	{
 		validateAmount(amount);
 		accounts[fromIBAN]->withdraw(amount);
@@ -204,7 +204,7 @@ void Bank::transfer(std::string fromIBAN, std::string toIBAN, double amount)
 
 void Bank::deposit(std::string IBAN, double amount)
 {
-	if (isIbanExist(IBAN)) 
+	if (IbanExists(IBAN)) 
 	{
 		validateAmount(amount);
 		accounts[IBAN]->deposit(amount);
@@ -217,7 +217,7 @@ void Bank::deposit(std::string IBAN, double amount)
 
 void Bank::withdraw(std::string IBAN, double amount)
 {
-	if (isIbanExist(IBAN)) 
+	if (IbanExists(IBAN)) 
 	{
 		validateAmount(amount);
 		accounts[IBAN]->withdraw(amount);
@@ -238,7 +238,7 @@ void Bank::validateAmount(double amount)
 
 bool Bank::isValidTransaction(double amount, std::string IBAN)
 {
-	if (!isIbanExist(IBAN)) 
+	if (!IbanExists(IBAN)) 
 	{
 		throw std::invalid_argument("IBAN number doesn't exist!");
 	} 
@@ -252,7 +252,7 @@ bool Bank::isValidTransaction(double amount, std::string IBAN)
 	}
 }
 
-bool Bank::isIbanExist(std::string IBAN)
+bool Bank::IbanExists(std::string IBAN)
 {
 	if (accounts.count(IBAN) > 0) 
 	{

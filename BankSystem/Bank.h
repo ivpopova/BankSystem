@@ -42,7 +42,7 @@ public:
 	void withdraw(std::string IBAN, double amount);
 
 	bool isValidTransaction(double amount, std::string IBAN);	
-	bool isIbanExist(std::string IBAN);
+	bool IbanExists(std::string IBAN);
 	bool isCustomerExist(std::string customerID);
 private:
 	std::string name;
