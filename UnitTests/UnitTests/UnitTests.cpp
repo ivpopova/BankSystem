@@ -77,6 +77,7 @@ namespace UnitTests
 		const int AGE = 22;
 		const double ACCOUNT_BALANCE = 1000;
 		const double AMOUNT = 200;
+
 		TEST_METHOD(BankDepositTest)
 		{
 			Customer* customer = new Customer(NAME, AGE, CUSTOMER_ID);
@@ -127,18 +128,19 @@ namespace UnitTests
 
 			Assert::IsTrue(bank->isCustomerExist(CUSTOMER_ID));
 		}
+
 		TEST_METHOD(BankAddCheckingAccountTest)
 		{
 			bank->addCheckingAccount(IBAN, CUSTOMER_ID, ACCOUNT_BALANCE);
 
-			Assert::IsTrue(bank->isIbanExist(IBAN));
+			Assert::IsTrue(bank->IbanExists(IBAN));
 		}
 
 		TEST_METHOD(BankAddSavingsAccountTest)
 		{
 			bank->addSavingsAccount(IBAN, CUSTOMER_ID, ACCOUNT_BALANCE, INTEREST_RATE);
 
-			Assert::IsTrue(bank->isIbanExist(IBAN));
+			Assert::IsTrue(bank->IbanExists(IBAN));
 		}
 
 		TEST_METHOD(BankDeleteCustomerTest)
@@ -156,7 +158,7 @@ namespace UnitTests
 
 			bank->deleteAccount(IBAN);
 
-			Assert::IsFalse(bank->isIbanExist(IBAN));
+			Assert::IsFalse(bank->IbanExists(IBAN));
 		}
 
 		TEST_METHOD(BankDeleteAccountExceptionTest)
@@ -273,6 +275,16 @@ namespace UnitTests
 			manager->removeEmployee(0);
 
 			Assert::IsTrue(manager->getEmployees().size() == 0);
+		}
+
+		TEST_METHOD(ManagerGetNumberOfEmployeesTest)
+		{
+			std::vector<Employee*> employees;
+			Manager* manager = new Manager(MANAGER_NAME, MANAGER_AGE, employees, MANAGER_SALARY);
+
+			manager->addEmployee(EMPLOYEE_NAME, EMPLOYEE_AGE, EMPLOYEE_POSITION, EMPLOYEE_SALARY);
+
+			Assert::AreEqual(1, manager->getNumberOfEmployees());
 		}
 	};
 }
