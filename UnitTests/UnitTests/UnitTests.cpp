@@ -36,6 +36,7 @@ namespace UnitTests
 		const double BALANCE = 1200;
 		const double DEPOSIT_AMOUNT = 100;
 		const double WITHDRAW_AMOUNT = 100;
+
 		TEST_METHOD(CheckingAccountDepositTest)
 		{
 			CheckingAccount* account = new CheckingAccount(IBAN, CUSTOMER_ID, BALANCE);
@@ -45,7 +46,8 @@ namespace UnitTests
 			const double balanceAfterDeposit = BALANCE + DEPOSIT_AMOUNT;
 			Assert::AreEqual(balanceAfterDeposit, account->getBalance());
 		}  
-	    TEST_METHOD(CheckingAccountWithdrawTest)
+	    
+		TEST_METHOD(CheckingAccountWithdrawTest)
 		{
 			CheckingAccount* account = new CheckingAccount(IBAN, CUSTOMER_ID, BALANCE);
 
@@ -155,6 +157,88 @@ namespace UnitTests
 			bank->deleteAccount(IBAN);
 
 			Assert::IsFalse(bank->isIbanExist(IBAN));
+		}
+
+		TEST_METHOD(BankDeleteAccountExceptionTest)
+		{
+			bool hasThrownException = false;
+
+			try
+			{
+				bank->deleteAccount(IBAN);
+			}
+			catch (std::invalid_argument& ia)
+			{
+				hasThrownException = true;
+			}
+
+			Assert::IsTrue(hasThrownException);
+		}
+
+		TEST_METHOD(BankDeleteCustomerExceptionTest)
+		{
+			bool hasThrownException = false;
+
+			try
+			{
+				bank->deleteCustomer(CUSTOMER_ID);
+			}
+			catch (std::invalid_argument& ia)
+			{
+				hasThrownException = true;
+			}
+
+			Assert::IsTrue(hasThrownException);
+		}
+
+		TEST_METHOD(BankAddCustomerExceptionTest)
+		{
+			bank->addCustomer(NAME, AGE, CUSTOMER_ID);
+			bool hasThrownException = false;
+			
+			try
+			{
+				bank->addCustomer(NAME, AGE, CUSTOMER_ID);
+			}
+			catch (std::invalid_argument& ia)
+			{
+				hasThrownException = true;
+			}
+
+			Assert::IsTrue(hasThrownException);
+		}
+
+		TEST_METHOD(BankAddBusinessCustomerExceptionTest)
+		{
+			bool hasThrownException = false;
+
+			try
+			{
+				bank->addBusinessCustomer(NAME, AGE, CUSTOMER_ID, BUSINESS_TYPE);
+			}
+			catch (std::invalid_argument& ia)
+			{
+				hasThrownException = true;
+			}
+
+			Assert::IsFalse(hasThrownException);
+		}
+
+		TEST_METHOD(BankAddCheckingAccountExceptionTest)
+		{
+			bank->addCheckingAccount(IBAN, CUSTOMER_ID, ACCOUNT_BALANCE);
+			bool hasThrownException = false;
+
+			try
+			{
+				bank->addCheckingAccount(IBAN, CUSTOMER_ID, ACCOUNT_BALANCE);
+			}
+			catch (std::invalid_argument& ia)
+			{
+				hasThrownException = true;
+			}
+
+			Assert::IsTrue(hasThrownException);
 		}
 	};
 }
