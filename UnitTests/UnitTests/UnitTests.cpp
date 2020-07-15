@@ -241,4 +241,38 @@ namespace UnitTests
 			Assert::IsTrue(hasThrownException);
 		}
 	};
+
+	TEST_CLASS(ManagerTest)
+	{
+	public:
+		const std::string MANAGER_NAME = "Simeon Georgiev";
+		const int MANAGER_AGE = 47;
+		const double MANAGER_SALARY = 2000;
+
+		const std::string EMPLOYEE_NAME = "Maya Dimitrova";
+		const int EMPLOYEE_AGE = 33;
+		const double EMPLOYEE_SALARY = 800;
+		const std::string EMPLOYEE_POSITION = "Cashier";
+
+		TEST_METHOD(ManagerAddEmployeeTest)
+		{
+			std::vector<Employee*> employees;
+			Manager* manager = new Manager(MANAGER_NAME, MANAGER_AGE, employees, MANAGER_SALARY);
+
+			manager->addEmployee(EMPLOYEE_NAME, EMPLOYEE_AGE, EMPLOYEE_POSITION, EMPLOYEE_SALARY);
+
+			Assert::IsTrue(manager->getEmployees().size() == 1);
+		}
+
+		TEST_METHOD(ManagerRemoveEmployeeTest)
+		{
+			std::vector<Employee*> employees;
+			Manager* manager = new Manager(MANAGER_NAME, MANAGER_AGE, employees, MANAGER_SALARY);
+			manager->addEmployee(EMPLOYEE_NAME, EMPLOYEE_AGE, EMPLOYEE_POSITION, EMPLOYEE_SALARY);
+
+			manager->removeEmployee(0);
+
+			Assert::IsTrue(manager->getEmployees().size() == 0);
+		}
+	};
 }
