@@ -37,13 +37,13 @@ void Account::setBalance(const double balance)
 	this->balance = balance;
 }
 
-void Account::deposit(double deposit)
+void Account::deposit(double amount)
 {
-	this->setBalance(getBalance() + deposit);
+	this->setBalance(getBalance() + amount);
 }
 
-void Account::withdraw(double withdraw)
+void Account::withdraw(double amount)
 {
-	setBalance(getBalance() - withdraw);
+	setBalance(getBalance() - amount);
 }
 

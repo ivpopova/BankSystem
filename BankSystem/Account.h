@@ -15,8 +15,8 @@ public:
 	void setCustomerID(const std::string customerID);
 	void setBalance(const double balance);
 
-	void deposit(double deposit);
-	void withdraw(double withdraw);
+	void deposit(double amount);
+	void withdraw(double amount);
 	virtual void printInformation() = 0;
 private:
 	std::string IBAN;
