@@ -1,7 +1,7 @@
 # BankSystem
 A repository containing the Bank System Console Application for the Clean Code   Course at FMI. Read more in Documentation.
 
-# Main Commands (BANK MENU):
+# Main Commands (Bank Menu):
 
 1 - List customers
      
