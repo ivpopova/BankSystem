@@ -21,6 +21,6 @@ void Customer::printInformation()
 	std::cout << "Customer Info:" << std::endl;
 	std::cout << "Name: " << this->getName() << std::endl;
 	std::cout << "ID: " << this->getID() << std::endl;
-    std::cout << "AGE " << this->getAge() << std::endl;
+	std::cout << "AGE " << this->getAge() << std::endl;
 	std::cout << "--------------------------------------" << std::endl;
 }
