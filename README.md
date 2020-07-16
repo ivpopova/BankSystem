@@ -1,35 +1,37 @@
 # BankSystem
-A repository containing the Bank System Console Application for the Clean Code   Course at FMI. 
+A repository containing the Bank System Console Application for the Clean Code   Course at FMI. Read more in Documentation.
 
+# Main Commands (BANK MENU):
 
+# >>>>> Options <<<<
 
-# Commands:
-Class Menu contains all functionalities of the BankSystem:
+1 - List customers
+     
+2 - Add new customer
 
-•	  void listCustomers(Bank&);  
-
-•		void addNewCustomer(Bank&);
-
-•		void addNewBusinessCustomer(Bank&);
-
-•		void deleteCustomer(Bank&);
-
-•		void listAllAccounts(Bank&);
-
-•		void listCustomerAccount(Bank&);
-
-•		void addNewCheckingAccount(Bank&);
-
-•		void addNewSavingAccount(Bank&);
-
-•		void deleteAccount(Bank&);
-
-•		void withdrawFromAccount(Bank&);
-
-•		void depositToAccount(Bank&);
-
-•		void transfer(Bank&);
-
-•		void getLoan(Bank&);
-
-•		void listEmployees(Bank&);
+3 - Add new business customer
+     
+4 - Delete customer
+     
+5 - List all accounts
+     
+6 - List customer account
+     
+7 - Add new Checking Account
+     
+8 - Add new Saving Account
+     
+9 - Delete account
+     
+10 - Withdraw from account
+    
+11 - Deposit to account
+    
+12 - Transfer
+    
+13 - Get Loan
+    
+14 - List Employees
+    
+Quit - Any other number
+    
