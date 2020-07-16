@@ -8,7 +8,8 @@
 #include"Manager.h"
 #include <map>
 
-class Bank {
+class Bank 
+{
 public:
 	Bank() = delete;
 	Bank(std::string name, Manager* manager, std::map<std::string, Customer*> customers, std::map<std::string, Account*> accounts);

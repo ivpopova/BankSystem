@@ -2,7 +2,8 @@
 #include"Employee.h"
 #include <vector>
 
-class Manager:public Employee {
+class Manager : public Employee 
+{
 public:
 	Manager(std::string name, int age, std::vector<Employee*> employees, double salary);
 	~Manager();

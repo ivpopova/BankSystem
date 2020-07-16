@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
 
-class Loan {
+class Loan
+{
 public:
 	Loan() = delete;
 	Loan(double amount, double loanRate, std::string ownerID);

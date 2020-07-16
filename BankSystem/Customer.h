@@ -1,7 +1,8 @@
 #pragma once
 #include"Person.h"
 
-class Customer:public Person {
+class Customer : public Person 
+{
 public:
 	Customer(std::string name, int age, std::string ID);
 	~Customer() = default;

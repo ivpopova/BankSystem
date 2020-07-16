@@ -1,7 +1,8 @@
 #pragma once
 #include"Account.h"
 
-class SavingsAccount:public Account {
+class SavingsAccount : public Account 
+{
 public:
 	SavingsAccount(std::string IBAN, std::string customerID, double balance, double interestRate);
 	~SavingsAccount() = default;

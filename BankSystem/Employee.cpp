@@ -1,7 +1,7 @@
 #include "Employee.h"
 #include <iostream>
 
-Employee::Employee(std::string name, int age, std::string position, double salary): Person(name, age)
+Employee::Employee(std::string name, int age, std::string position, double salary) : Person(name, age)
 {
 	setPosition(position);
 	setSalary(salary);

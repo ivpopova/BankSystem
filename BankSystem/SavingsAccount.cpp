@@ -1,7 +1,7 @@
 #include "SavingsAccount.h"
 #include <iostream>
 
-SavingsAccount::SavingsAccount(std::string IBAN, std::string customerID, double balance, double interestRate):Account(IBAN, customerID, balance)
+SavingsAccount::SavingsAccount(std::string IBAN, std::string customerID, double balance, double interestRate) : Account(IBAN, customerID, balance)
 {
 	setInterestRate(interestRate);
 }

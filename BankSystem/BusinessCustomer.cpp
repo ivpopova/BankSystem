@@ -1,7 +1,7 @@
 #include "BusinessCustomer.h"
 #include <iostream>
 
-BusinessCustomer::BusinessCustomer(std::string name, int age, std::string ID, std::string businessType):Customer(name, age, ID)
+BusinessCustomer::BusinessCustomer(std::string name, int age, std::string ID, std::string businessType) : Customer(name, age, ID)
 {
 	setBusinessType(businessType);
 }

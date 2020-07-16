@@ -1,7 +1,7 @@
 #include "CheckingAccount.h"
 #include <iostream>
 
-CheckingAccount::CheckingAccount(std::string IBAN, std::string customerID, double balance):Account(IBAN, customerID,balance)
+CheckingAccount::CheckingAccount(std::string IBAN, std::string customerID, double balance) : Account(IBAN, customerID,balance)
 {
 }
 

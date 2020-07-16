@@ -3,7 +3,8 @@
 #include"Bank.h"
 #include "Manager.h"
 
-class Menu {
+class Menu 
+{
 public:
 	void showMenu();
 	void listCustomers(Bank&);

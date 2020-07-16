@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
 
-class Account {
+class Account 
+{
 public:
 	Account() = delete;
 	Account(std::string IBAN, std::string ownerID, double balance);

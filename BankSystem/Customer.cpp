@@ -1,7 +1,7 @@
 #include "Customer.h"
 #include <iostream>
 
-Customer::Customer(std::string name, int age, std::string ID): Person(name, age)
+Customer::Customer(std::string name, int age, std::string ID) : Person(name, age)
 {
 	setID(ID);
 }

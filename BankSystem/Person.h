@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
 
-class Person {
+class Person 
+{
 public:
 	Person() = delete;
 	Person(std::string name, int age);

@@ -1,7 +1,7 @@
 #include "Manager.h"
 #include <iostream>
 
-Manager::Manager(std::string name, int age, std::vector<Employee*> employees, double salary): Employee(name, age, "Manager", salary)
+Manager::Manager(std::string name, int age, std::vector<Employee*> employees, double salary) : Employee(name, age, "Manager", salary)
 {
 	this->employees = employees;
 }
