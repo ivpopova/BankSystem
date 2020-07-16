@@ -1,10 +1,12 @@
 # BankSystem
 A repository containing the Bank System Console Application for the Clean Code   Course at FMI. 
 
-Commands:
+
+
+# Commands:
 Class Menu contains all functionalities of the BankSystem:
 
-•	   void listCustomers(Bank&);  
+•	  void listCustomers(Bank&);  
 
 •		void addNewCustomer(Bank&);
 
