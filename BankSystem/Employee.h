@@ -5,7 +5,7 @@ class Employee : public Person
 {
 public:
 	Employee(std::string name, int age, std::string position, double salary);
-	~Employee() = default;
+	virtual ~Employee() = default;
 
 	std::string getPosition() const;
 	double getSalary() const;

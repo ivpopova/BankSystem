@@ -13,7 +13,7 @@ class Bank
 public:
 	Bank() = delete;
 	Bank(std::string name, Manager* manager, std::map<std::string, Customer*> customers, std::map<std::string, Account*> accounts);
-	~Bank();
+	virtual ~Bank();
 
 	std::string getName() const;
 	void setName(const std::string name);

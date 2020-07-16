@@ -5,7 +5,7 @@ CheckingAccount::CheckingAccount(std::string IBAN, std::string customerID, doubl
 {
 }
 
-void CheckingAccount::printInformation()
+void CheckingAccount::printInformation() 
 {
 	std::cout << "--------------------------"<< std::endl;
 	std::cout << "ACCOUNT TYPE: Checking Account" << std::endl;

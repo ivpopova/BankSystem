@@ -6,7 +6,7 @@ class Account
 public:
 	Account() = delete;
 	Account(std::string IBAN, std::string ownerID, double balance);
-	~Account() = default;
+	virtual ~Account() = default;
 
 	std::string getIBAN() const;
 	std::string getCustomerID() const;

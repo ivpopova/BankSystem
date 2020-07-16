@@ -6,7 +6,7 @@ class Person
 public:
 	Person() = delete;
 	Person(std::string name, int age);
-	~Person() = default;
+	virtual ~Person() = default;
 
 	const std::string getName()const;
 	const int getAge()const;

@@ -6,7 +6,7 @@ class Manager : public Employee
 {
 public:
 	Manager(std::string name, int age, std::vector<Employee*> employees, double salary);
-	~Manager();
+	virtual ~Manager();
 
 	const std::vector<Employee*> getEmployees() const;
 

@@ -5,7 +5,7 @@ class Customer : public Person
 {
 public:
 	Customer(std::string name, int age, std::string ID);
-	~Customer() = default;
+	virtual ~Customer() = default;
 
 	const std::string getID() const;
 	void setID(const std::string ID);

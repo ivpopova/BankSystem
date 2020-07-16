@@ -5,7 +5,7 @@ class BusinessCustomer : public Customer
 {
 public:
 	BusinessCustomer(std::string name, int age, std::string ID, std::string businessType);
-	~BusinessCustomer() = default;
+	virtual ~BusinessCustomer() = default;
 
 	const std::string getBusinessType() const;
 	void setBusinessType(const std::string businessType);
