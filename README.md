@@ -3,8 +3,6 @@ A repository containing the Bank System Console Application for the Clean Code  
 
 # Main Commands (BANK MENU):
 
-# >>>>> Options <<<<
-
 1 - List customers
      
 2 - Add new customer
