@@ -5,9 +5,9 @@ A repository containing the Bank System Console Application for the Clean Code  
 
 1 - List customers
      
-2 - Add new customer
+2 - Add a new customer
 
-3 - Add new business customer
+3 - Add a new business customer
      
 4 - Delete customer
      
@@ -15,19 +15,19 @@ A repository containing the Bank System Console Application for the Clean Code  
      
 6 - List customer account
      
-7 - Add new Checking Account
+7 - Add a new Checking Account
      
-8 - Add new Savings Account
+8 - Add a new Savings Account
      
-9 - Delete account
+9 - Delete an account
      
-10 - Withdraw from account
+10 - Withdraw from an account
     
-11 - Deposit to account
+11 - Deposit to an account
     
 12 - Transfer
     
-13 - Get Loan
+13 - Get a Loan
     
 14 - List Employees
     
