@@ -9,7 +9,7 @@ A repository containing the Bank System Console Application for the Clean Code  
 
 3 - Add a new business customer
      
-4 - Delete customer
+4 - Delete a customer
      
 5 - List all accounts
      
