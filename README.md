@@ -17,7 +17,7 @@ A repository containing the Bank System Console Application for the Clean Code  
      
 7 - Add new Checking Account
      
-8 - Add new Saving Account
+8 - Add new Savings Account
      
 9 - Delete account
      
