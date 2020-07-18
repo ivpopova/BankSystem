@@ -13,7 +13,7 @@ A repository containing the Bank System Console Application for the Clean Code  
      
 5 - List all accounts
      
-6 - List customer account
+6 - List a customer account
      
 7 - Add a new Checking Account
      
